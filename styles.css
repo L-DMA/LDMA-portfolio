@@ -20,19 +20,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.intro-bio-container {
-    display: flex;
-    cursor: default;
-  }
-  .hero {
+  .about {
     height: 100vh;
   }
-  /* .separation {
-    height: 150px; 
-    width: 100%;
-    background-color: #1a1a1a;
-    margin-bottom: 40px;
-  } */
   .skills {
     padding: 30px;
     display: flex;
@@ -157,58 +147,8 @@ button:active .arrowContainer {
   font-family: intersem;
   font-size: 1.2rem;
 }
-
-.letter1,
-.letter2,
-.letter3,
-.letter4 {
-  font-size: 7rem;
-  font-family: intermed;
-  display: inline-block;
-  margin-bottom: -10px;
-}
-
-.visible,
-.hidden {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.hidden {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 6rem;
-  background: radial-gradient(circle, #fa64b5, #a3ea71);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.visible:hover + .hidden {
-  /* This is where i have a problem, it was working and its still working on D M A letter but not working for L since i added overlayl:hover effect ? */
-  font-size: 6rem;
-  opacity: 1;
-}
-.intro {
-  margin-top: 55px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  background-image: url(https://i.ibb.co/4S8gbyL/finalilu.png);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center; /* or specify the desired size, e.g., background-size: 50% auto; */
-}
-.intro:hover {
-  background-image: none;
-}
-.intro:hover + .bio-container + .bio {
-  /* This is where i have a problem, it was working and its still working on D M A letter but not working for L since i added overlayl:hover effect ? */
-  font-size: 6rem;
-  opacity: 1;
-}
 .bio-default {
   margin-top: 75px;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,6 +157,22 @@ button:active .arrowContainer {
   border: 3px solid #fa64b5;
   border-radius: 15px;
 }
+
+.about {
+  width: 100%;
+  display: flex;
+  
+}
+
+.intro {
+  width: 50%;
+  margin-top: 90px;
+}
+
+.illu{
+  width: 100%;
+}
+
 .bio-container {
   height: auto;
   margin-top: 20px;
@@ -242,7 +198,7 @@ a {
     width: 6rem;
     margin: auto;
     display: flex;
-    margin-top: 80px;
+    margin-top: -100px;
   }
   .main__scroll-text {
     font-size: 1.2rem;
@@ -526,6 +482,10 @@ a {
   background-color: #fa64b5;
   border-color: #a3ea71;
   color:#1a1a1a;
+}
+
+.form {
+  font-family: intersem;
 }
 
 .contact {
