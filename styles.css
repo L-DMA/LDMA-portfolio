@@ -388,6 +388,7 @@ a {
   margin-bottom: 40px;
   width: 100%;
   max-width: 800px;
+  margin: auto;
  }
 
  .imgproject img {
