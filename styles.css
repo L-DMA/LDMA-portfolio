@@ -4,8 +4,12 @@
 }
 
 @font-face {
-  font-family: intersem;
-  src: url(fonts/Inter-SemiBold.ttf);
+  font-family: interlight;
+  src: url(fonts/Inter-Light.ttf);
+}
+@font-face {
+  font-family: inter;
+  src: url(fonts/Inter-Regular.ttf);
 }
 
 * {
@@ -20,16 +24,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-  .about {
-    height: 100vh;
-  }
   .skills {
     padding: 30px;
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
   }
-button {
+
+.button {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -46,6 +48,7 @@ button {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
+  font-family: intermed;
 }
 button:hover {
   transform: translate(2px, 2px);
@@ -72,7 +75,7 @@ button:hover::after {
   justify-content: start;
   align-items: center;
   overflow: hidden;
-  max-width: 37%; /* adjust this if the button text is not proper */
+  max-width: 37%; 
   font-size: 2em;
   font-weight: 600;
 }
@@ -144,7 +147,7 @@ button:active .arrowContainer {
   margin-left: 20px;
   text-decoration: none;
   color: #1a1a1a;
-  font-family: intersem;
+  font-family: intermed;
   font-size: 1.2rem;
 }
 .bio-default {
@@ -178,12 +181,12 @@ button:active .arrowContainer {
   margin-top: 20px;
   }
 .louca p {
-  font-family: intermed;
+  font-family: inter;
   line-height: 2;
 }
 .louca h3 {
   text-align: center;
-  font-family: intersem;
+  font-family: intermed;
 }
 
 /* <reset-style> ============================ */
@@ -202,7 +205,7 @@ a {
   }
   .main__scroll-text {
     font-size: 1.2rem;
-    font-family: intermed;
+    font-family: inter;
 
   }
   .main__action:hover .main__scroll-box {
@@ -226,6 +229,43 @@ a {
       opacity: 0;
     }
   }
+
+  @media (max-width: 1100px) {
+    .scroll {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+  .skills {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+@media (max-width: 1100px) {
+  .about {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 1100px) {
+  .intro {
+      width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .imgproject1 {
+    max-width: 350px;
+    
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-container {
+    width: 340px;
+  }
+}
   .card-container {
     width: 400px;
     height: 400px;
@@ -235,7 +275,13 @@ a {
     overflow: hidden;
     font-family: intermed;
   }
-  
+
+  @media (max-width: 1100px) {
+    .card-container {
+      width: 340px;
+    }
+  }
+
   .card {
     width: 100%;
     height: 100%;
@@ -299,37 +345,21 @@ a {
   .card:hover .front-content p {
     opacity: 0;
   }
-  @media screen and (max-width: 1400px) {
-    .hidden {
-      font-size: 2rem;
-    }
-    .visible:hover + .hidden {
-      font-size: 2rem;
-    }
-  }
-  @media screen and (max-width: 1000px) {
-    .visible:hover + .hidden {
-      font-size: 1px;
-    }
-    .hidden {
-      font-size: 1px;
-    }
-  }
+
   .competence {
-    height: 100vh;
     display: flex;
     flex-direction: column;
   }
     
   .node {
-    font-family: intermed;
+    font-family: inter;
     margin: 0 auto;
     margin-top: 10px;
     line-height: 2;
   }
   .roadmap {
     margin: 20px auto;
-    font-family: intersem;
+    font-family: intermed;
   }
   .bold {
     font-weight: bold;
@@ -351,20 +381,25 @@ a {
     margin-top: 90px;
     margin-bottom: 20px;
   }
-
- .imgproject1 {
-  width: 45%;
- }
  
  .imgproject {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
  }
 
+ .imgproject img {
+  width: 100%;         /* L'image utilise 100% de la largeur de son conteneur */
+  max-width: 600px;    /* Largeur maximale que l'image peut atteindre */
+  height: auto;        /* Maintien des proportions de l'image */
+}
+
  .infoproject1 {
-  font-family: intersem;
+  font-family: inter;
   margin-bottom: 50px;
+  line-height: 2;
  }
 
  .form-container {
@@ -485,7 +520,7 @@ a {
 }
 
 .form {
-  font-family: intersem;
+  font-family: inter;
 }
 
 .contact {
